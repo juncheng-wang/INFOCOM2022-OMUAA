@@ -52,10 +52,16 @@ load('MAC.mat');
 figure;
 subplot(3,1,1);
 plot(1:par.T,Accuracy);
+ylabel({'$\textrm{Test accuracy}~\bar{A}(T)$ (\%)'},'Interpreter','latex');
+xlabel({'Iterations $T$'},'Interpreter','latex'); 
 subplot(3,1,2);
 plot(1:par.T,Cost);
+ylabel({'Training loss $\bar{f}(T)$'},'Interpreter','latex');
+xlabel({'Iterations $T$'},'Interpreter','latex');
 subplot(3,1,3);
 plot(1:par.T,Power);
+ylabel({'Transmit power $\bar{P}(T)$'},'Interpreter','latex');
+xlabel({'Iterations $T$'},'Interpreter','latex');
 
 %% System Initialization
 function System_Initialization(Case,sys,com)
